@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> Список всех изображений</h1>
+    <div class="row">
+      {% if object_list %}
+        {% load thumbnail %}
+        {% for image in object_list %}
+          <div class="col-3 m-2">
+            <div class="image">
+              <a href="{{ image.get_absolute_url }}">
+                {% thumbnail image.image "200x200" crop="40% top" as im %}
+                  <a href="{{ image.get_absolute_url }}"> 
+                    <img src="{{ im.url }}">
+                  </a>
+                {% endthumbnail %}
+              </a>
+              <div class="info">
+                <div class="p-3 my-2 bg-secondary text-white">Комментарий: {{ image.description }}</div> 
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>На сайте нет загруженных изображений</p>
+      {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load thumbnail %}
+{% thumbnail image.image "600" as im %}
+    <a href="{{ image.image.url }}">
+        <img src="{{ im.url }}" class="image-detail">
+    </a>
+{% endthumbnail %}
+
+<div class="border p-3 my-2"> 
+    <h3>Комментарий:</h3>
+    {{ image.description|linebreaks }} 
+</div>
+{% endblock %}
