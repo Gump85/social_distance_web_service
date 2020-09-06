@@ -20,3 +20,5 @@
 Фотографии после определенного периода времени (приблизительно 1 - 2 часа) удаляются из базы
 из-за потери актуальности данных.
 
+## Ссылка на презентацию 
+https://docs.google.com/presentation/d/16bEGecsKB01adIwCGfHXwE4N84OZ2PMJKRFRIQvjb7o/edit?usp=sharing
