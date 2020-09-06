@@ -23,7 +23,7 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('images/', include('images.urls')),
-    # перенаправляем корневой URL на приложение catalog
+    # перенаправляем корневой URL на приложение images
     path('', RedirectView.as_view(url='/images/', permanent=True))
 ]
 
